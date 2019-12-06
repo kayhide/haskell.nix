@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+#nix build "(with import <nixpkgs> (import ./.); haskell-nix.nix-tools)" --keep-failed --show-trace
+nix-build -E "(with import <nixpkgs> (import ./.); haskell-nix.nix-tools)" --keep-failed --verbose

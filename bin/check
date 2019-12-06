@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+dir="$(find /private/var/folders/qy/4m5dss6j6vg51dspg41ty2mw0000gn/T -type d -name "nix-build-ghc-8.4.4.drv-*" | sort -V | tail -1)"
+path="$dir/ghc-8.4.4-configured-src/aclocal.m4"
+
+echo $path
+grep -n "fp_cv_gcc_version=" $path
